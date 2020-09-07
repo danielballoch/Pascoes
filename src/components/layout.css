@@ -595,3 +595,11 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+/* added css */
+
+.nav_link {
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+}
