@@ -1,0 +1,12 @@
+{
+    "Main" : {
+      "header" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1",
+          "label" : "Header",
+          "placeholder" : "Contact Us"
+        }
+      }
+    }
+  }

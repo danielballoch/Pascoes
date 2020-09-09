@@ -1,0 +1,44 @@
+{
+    "Main" : {
+      "title" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1",
+          "label" : "Title",
+          "placeholder" : "Pascoes"
+        }
+      },
+      "sub-title" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading2",
+          "label" : "sub-title",
+          "placeholder" : "Plumbing&Gas"
+        }
+      },
+      "service1" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "service1-image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "service1-image"
+              }
+            },
+            "service1-title" : {
+              "type" : "StructuredText",
+              "config" : {
+                "single" : "heading3",
+                "label" : "service1-title",
+                "placeholder" : "New Builds & Renovations"
+              }
+            }
+          },
+          "label" : "service1"
+        }
+      }
+    }
+  }
