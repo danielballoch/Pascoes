@@ -1,0 +1,60 @@
+{
+    "Main": {
+      "phone": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph",
+          "label": "phone",
+          "placeholder": "+64 027 727 2639"
+        }
+      },
+      "email": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph",
+          "label": "email",
+          "placeholder": "liam@pascoesplumbing.co.nz"
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "logo"
+        }
+      },
+      "link1": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "link1",
+          "placeholder": "Home"
+        }
+      },
+      "link2": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph",
+          "label": "link2",
+          "placeholder": "Services"
+        }
+      },
+      "link3": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph",
+          "label": "link3",
+          "placeholder": "About"
+        }
+      },
+      "link4": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "link4",
+          "placeholder": "Contact"
+        }
+      }
+    }
+  }

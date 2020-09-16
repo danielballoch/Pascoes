@@ -22,7 +22,7 @@ const Navigation = () => {
          `}
          render={data => (
             <header className='nav'>
-                  {/* {console.log(data)} */}
+                  {console.log(data)}
                 <div className='nav-div'>
                     <Link to="/" className="nav_link">
                     Home
@@ -30,8 +30,8 @@ const Navigation = () => {
                     <Link to="/services" className="nav_link">
                     Services
                     </Link>
-                    <Link to="/services" className="nav_link">
-                    {/* <Img fluid={data.prismicNavigation.data.logo.fluid}/> */}
+                    <Link to="/services" className="nav_logo">
+                    <Img fluid={data.prismicNavigation.data.logo.fluid}/>
                     </Link>
                     <Link to="/about" className="nav_link">
                     About
@@ -39,8 +39,6 @@ const Navigation = () => {
                     <Link to="/contact" className="nav_link">
                     Contact
                     </Link>
-
-                
                 </div>
             </header>
          )}

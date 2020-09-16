@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Open Sans', serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -598,6 +598,8 @@ pre tt:after {
 
 /* added css */
 
+
+/* nav */
 .nav {
     display: flex;
     justify-content: center;
@@ -619,6 +621,7 @@ pre tt:after {
     max-width: 960px;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav_link {
@@ -626,3 +629,65 @@ pre tt:after {
     color: black;
     text-decoration: none;
 }
+
+.nav_logo {
+    height: 100%;
+    width: 150px;
+}
+
+/* end nav */
+
+/* footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+    background: white;
+    background-color: #006699;
+    color: white;
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05); */
+    height: 400px;
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+.footer-nav {
+    display: flex;
+    margin-top: -40px;
+    padding: 0 30px;
+    max-width: 430px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer_logo {
+    height: 200px;
+    width: 430px;
+    margin: 0;
+    padding: 0;
+}
+.footer_logo Link{
+    margin: 0;
+    padding: 0;
+}
+.footer_logo img {
+    border-radius: 8px;
+    margin: 0;
+    padding: 0;
+}
+.footer_copyright {
+    text-align: center;
+    background-color: #006699;
+    color: white;
+}
+
+/* end footer */
