@@ -7,6 +7,14 @@
           "label" : "Header",
           "placeholder" : "Contact Us"
         }
+      },
+      "image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "image"
+        }
       }
     }
   }

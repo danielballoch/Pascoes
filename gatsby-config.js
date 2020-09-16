@@ -1,3 +1,5 @@
+const prismicHtmlSerializer = require('./src/gatsby/htmlSerializer')
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -67,13 +69,14 @@ module.exports = {
             content,
             children,
           ) => {
-            // Your HTML serializer
+            prismicHtmlSerializer
           },
     
           // Provide an object of Prismic custom type JSON schemas to load into
           // Gatsby. This is required.
           schemas: {
             contact: require('./src/prismic-shemas/contact.json'),
+            navigation: require('./src/prismic-shemas/navigation.json')
             // homepage: require('./src/prismic-shemas/homepage.json')
           },
     
