@@ -1,0 +1,92 @@
+{
+    "Main": {
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "title",
+          "placeholder": "About Us"
+        }
+      },
+      "doublecontent": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "text1section1": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph",
+                "label": "text1section1",
+                "placeholder": "Pascoes Plumbing & Gas fitting is dedicated to... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras metus ex, vehicula non"
+              }
+            },
+            "text1section2": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph",
+                "label": "text1section2",
+                "placeholder": "We make sure... Lorem ipsum dolor sit amet,"
+              }
+            },
+            "text1section3": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph",
+                "label": "text1section3",
+                "placeholder": "Play this short video for the full story."
+              }
+            },
+            "media1": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "media1"
+              }
+            }
+          },
+          "label": "doublecontent"
+        }
+      },
+      "title2": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "title2",
+          "placeholder": "Our Customers"
+        }
+      },
+      "testimonials": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "profileimage": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "profileImage"
+              }
+            },
+            "profilename": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph",
+                "label": "profilename",
+                "placeholder": "John Doe"
+              }
+            },
+            "testimonialtext": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                "label": "testimonialtext",
+                "placeholder": "\"Liam is fantastic at what he does. He’s very professional and friendly. He came first thing on a Friday morning having only just been called - rearranging his day for us and assurance that we would get hot water back. He took the simple steps first to assure that these were not the problems before going ahead to do the most complex task (this is what all trade people should do, and yet often don’t).  We really appreciated him and will recommend him to everyone.  Thanks Liam for your services and your friendly and informative manner !\""
+              }
+            }
+          },
+          "label": "testimonials"
+        }
+      }
+    }
+  }
