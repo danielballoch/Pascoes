@@ -736,6 +736,14 @@ pre tt:after {
     border-left: 10px solid #006699 ;
     padding: 10px 20px 10px 20px;
 }
+.indent_blue {
+    border-left: 10px solid #21B3FB ;
+    padding: 10px 20px 10px 20px;
+}
+.indent_green {
+    border-left: 10px solid #008000 ;
+    padding: 10px 20px 10px 20px;
+}
 
 .media_card {
     background-color:#F2F9FC; 
@@ -790,6 +798,12 @@ pre tt:after {
     font-size: larger;
     padding: 10px;
 }
+.profile:hover {
+    /* transform: scale(0.95); */
+    background-color:  #F2F9FC;
+    cursor: pointer;
+    transition: .3s;
+}
 .profile_name {
     padding-left: 18px;
 }
@@ -804,4 +818,117 @@ pre tt:after {
 .active_profile {
     background-color:  #F2F9FC;
 }
+
+/* end testimonials */
+
+/* services section */
+
+.services {
+    display: flex;
+    flex-direction: row;
+}
+.service {
+    min-width: 300px;
+    margin: 10px;
+    background-color: #F2F9FC;
+}
+
+.service p {
+    margin: 0;
+}
+
+.service_head {
+    background-color: #0071AD;
+    width: 100%;
+    color: white;
+    padding: 10px;
+}
+
+.service_summary {
+    padding: 10px;
+}
+
+.service_content {
+    display: flex;
+    flex-direction: row;
+    min-width: 300px;
+    margin: 50px 10px;
+    background-color: #F2F9FC;
+}
+
+.placeholder_img {
+    margin: 60px 20px;
+    min-width:320px;
+    min-height: 380px;
+    background-color:#0099E6;
+}
+
+.service_content_body {
+    padding: 60px 20px;
+}
+
+.coverage {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    min-width: 300px;
+    margin: 50px 10px;
+    /* background-color: #F2F9FC; */
+}
+.coverage_div {
+    max-width: 380px;
+    background-color: #F2F9FC;
+    padding: 40px 20px;
+}
+
+/* index */
+
+.hero_text2 {
+color: #0175A8;
+ font: Open Sans;
+ font-size: 145px;
+ font-weight: 400;
+ text-align: center;
+ margin-top: 60px;
+ margin-bottom: -90px;
+}
+
+.indx_services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 100px auto;
+}
+.indx_services h2 {
+    font-weight: 300;
+}
+
+.place_serviceimg {
+    width: 240px;
+    height:240px;
+    background-color: #0099E6;
+    border-radius: 300px;
+}
+
+.indx_service{
+    max-width: 240px;
+    text-align: center;
+}
+
+.why {
+    height: 800px;
+    width: 100%;
+    background-color: #0099E6;
+}
+
+.why_title {
+    text-decoration: underline;
+    color: white;
+    font-size: 100px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 65px;
+}
+
+
 

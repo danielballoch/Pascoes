@@ -6,7 +6,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 class About extends Component {
-    
+    constructor(props){
+        super(props)
+        this.state = {activeTestimonial: 1 }
+    }
     render(){
         const {
             data: {about},
@@ -41,28 +44,28 @@ class About extends Component {
             <div className="testimonials">
                 <div className="testimonials_text">
                     <div
-                        dangerouslySetInnerHTML={{ __html: `${about.data.testimonials[0].testimonialtext.html}` }}
+                        dangerouslySetInnerHTML={{ __html: `${about.data.testimonials[this.state.activeTestimonial].testimonialtext.html}` }}
                     /> 
                 </div>
                 <div className="testimonials_bar">
                     <div className="reviewers">
-                        <div className="profile">
-                            <div className="profile_image">
+                        <div className={this.state.activeTestimonial===0? "profile active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 0})}>
+                            <div className="profile_image" >
                                 <Img fluid={about.data.testimonials[0].profileimage.fluid} alt={about.data.testimonials[0].profileimage.alt}/>
                             </div>
                             <div className="profile_name">
                                 {about.data.testimonials[0].profilename.text}
                             </div>
                         </div>
-                        <div className="profile active_profile">
-                            <div className="profile_image">
+                        <div className={this.state.activeTestimonial===1? "profile active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 1})}>
+                            <div className="profile_image" >
                                 <Img fluid={about.data.testimonials[1].profileimage.fluid} alt={about.data.testimonials[1].profileimage.alt}/>
                             </div>
                             <div className="profile_name">
                                 {about.data.testimonials[1].profilename.text}
                             </div>
                         </div>
-                        <div className="profile">
+                        <div className={this.state.activeTestimonial===2? "profile active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 2})}>
                             <div className="profile_image">
                                 <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/>
                             </div>
