@@ -47,7 +47,7 @@ class About extends Component {
                         dangerouslySetInnerHTML={{ __html: `${about.data.testimonials[this.state.activeTestimonial].testimonialtext.html}` }}
                     /> 
                 </div>
-                <div className="testimonials_bar">
+                {/* <div className="testimonials_bar"> */}
                     <div className="reviewers">
                         <div className={this.state.activeTestimonial===0? "profile active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 0})}>
                             <div className="profile_image" >
@@ -75,7 +75,7 @@ class About extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            {/* </div> */}
 
 
             </Layout>
