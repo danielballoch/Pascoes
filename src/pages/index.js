@@ -1,5 +1,7 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
+import BackgroundImage from 'gatsby-background-image'
 
 
 import Layout from "../components/layout"
@@ -9,16 +11,20 @@ import SEO from "../components/seo"
 class Index extends Component {
     render(){
         const servicelist = ["New Builds & Renovations","Maintenance Plumbing", "Heating & Gas Fitting"];
+        const {
+            data: {index},
+        } = this.props
+        console.log(this.props)
         return(
         <Layout>
             <SEO title="Home" />
             <h1 className="hero_text2">PASCOE'S</h1>
             <h1 className="hero_text">Plumbing & Gas</h1>
             <div className="indx_services max_width">
-                {servicelist.map((value, i) => (
+                {index.data.service.map((value, i) => (
                     <div className="indx_service">
-                        <div className="place_serviceimg"></div>
-                        <h2>{value}</h2>
+                        <div className="place_serviceimg"><Img alt={value.thumbnail.alt} fluid={value.thumbnail.fluid}/></div>
+                        <h2>{value.service1.text}</h2>
                     </div>
                     
                     ))}
@@ -27,49 +33,62 @@ class Index extends Component {
             
             {/* <p>why section</p> */}
             <div className="why">
-                <h1 className="why_title">Why Pascoe's?</h1>
+                <h1 className="why_title">{index.data.why.text}</h1>
                 <div className="double_content max_width">
                     <div className="text_card box_shadow">
-                        <p>Pascoes Plumbing & Gas is dedicated to quality work and happy customers.</p>
-                        <p className="indent">Our team is family - we show up on time with positive attitudes, a friendly smile and provide the right solution for your individual needs.</p>
-                        <p>Play the short video to the right to see the full picture.</p>
+                        <p>{index.data.why1.text}</p>
+                        <p className="indent">{index.data.whyindent.text}</p>
+                        <p>{index.data.why2.text}</p>
                     </div>
-                    <div className="media_card box_shadow">img</div>
+                    <div className="media_card box_shadow"><Img alt={index.data.whyimg.alt} fluid={index.data.whyimg.fluid}/></div>
                 </div>
             </div>
             <div className="blend_bar"/>
             <div className="expect">
                 <div className="double_content max_width">
                     <div className="text-card">
-                        <h2>What to expect</h2>
-                        <p>At Pascoes Plumbing & Gas we take pride in our values and think this shines through in our work.</p>
-                        <ul>
-                            <li>Customer first approach</li>
-                            <li>Timely and trustworthy</li>
-                            <li>Respectful of property and surroundings</li>
-                            <li>Well presented and professional</li>
-                        </ul>
+                        <h2>{index.data.what.text}</h2>
+                        <p>{index.data.what1.text}</p>
+                        <div
+                                    dangerouslySetInnerHTML={{ __html: `${index.data.whatlist.html}` }}
+                                /> 
                     </div>
                     <div className="flex_col_center">
-                        <div className="placeholder_img2"></div>
+                        <div className="placeholder_img2"><Img alt={index.data.whatimg.alt} fluid={index.data.whatimg.fluid}/></div>
                         <button className="large_btn">Prevous Work</button>
                     </div>
                 </div>
             </div>
             <div className="blend_bar"/>
             <div className="indx_testimonials">
-                    <div className="profile_card box_shadow">
+
+            {index.data.homepagetestimonials.map((value, i) => (
+                <div className="profile_card box_shadow"className={i == 1? "profile_card box_shadow profile_active" : "profile_card box_shadow"}>
                             <div className="profile_image_placeholder box_shadow">
-                            {/* <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/> */}
+                            <Img fluid={value.thumbnail.fluid} alt={value.thumbnail.alt}/>
+                            </div>
+                            <div className="profile_name">
+                                {value.name.text}
+                            </div>
+                            <div
+                                    dangerouslySetInnerHTML={{ __html: `${value.testimonial.html}` }}
+                                /> 
+                            
+                    </div>
+                    ))}
+                    {/* <div className="profile_card box_shadow">
+                            <div className="profile_image_placeholder box_shadow">
+                             <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/> 
                             </div>
                             <div className="profile_name">
                                 John Russo
                             </div>
                             <p>"Brillient testimonial dui ac enim tincidunt suscipit. Nulla facilisi. Nunc in nulla elit. Quisque quis dolor ornare, consequat mauris sed, iaculis nibh. Ut ante nulla, maximus non feugiat nec, suscipit sed ipsum."</p>
-                    </div>
+                    </div> 
+                    
                     <div className="profile_card profile_active">
                             <div className="profile_image_placeholder box_shadow">
-                            {/* <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/> */}
+                            {/* <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/> 
                             </div>
                             <div className="profile_name">
                                 John Russo
@@ -78,18 +97,20 @@ class Index extends Component {
                     </div>
                     <div className="profile_card">
                             <div className="profile_image_placeholder">
-                            {/* <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/> */}
+                            {/* <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/> 
                             </div>
                             <div className="profile_name">
                                 John Russo
                             </div>
                             <p>"Brillient testimonial dui ac enim tincidunt suscipit. Nulla facilisi. Nunc in nulla elit. Quisque quis dolor ornare, consequat mauris sed, iaculis nibh. Ut ante nulla, maximus non feugiat nec, suscipit sed ipsum."</p>
                     </div>
+                    */}
             </div>
-            <div className="contact">
-                <div className="contact_form">
-                    
-                    <form className="contact_form">
+            <BackgroundImage className="contact"
+            fluid={index.data.backgroundimg.fluid}
+            >
+            {/* <div className="contact_form"> */}
+                    <form className="contact_form shadow_1">
                         <h2>Contact Now</h2>
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" placeholder="Your name.."/>
@@ -101,13 +122,13 @@ class Index extends Component {
                         <input type="text" id="email" name="email" placeholder="Your email.."/>
 
                         <label for="subject">Enquiry:</label>
-                        <textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
+                        <textarea id="subject" name="subject" placeholder="How can we help.." ></textarea>
                         <p>Our reply time is generally one business day, for a faster response please call 027 727 2639  </p>
                         <input className="contact_btn" type="submit" value="Send"/>
 
                     </form>
-                    </div> 
-            </div>
+                
+            </BackgroundImage>
             
             
         </Layout>
@@ -116,3 +137,77 @@ class Index extends Component {
 }
 
 export default Index
+
+
+export const pageQuery = graphql`
+query IndexQuery {
+    index: prismicIndex{
+        data {
+            service {
+                service1 {
+                    text
+                }
+                thumbnail {
+                    fluid{
+                        ...GatsbyPrismicImageFluid
+                    }
+                    alt
+                }
+            }
+            why {
+                text
+            }
+            why1 {
+                text
+            }
+            whyindent {
+                text
+            }
+            why2 {
+                text
+            }
+            whyimg {
+                fluid{
+                    ...GatsbyPrismicImageFluid
+                }
+                alt
+            }
+            what {
+                text
+            }
+            what1 {
+                text
+            }
+            whatlist {
+                html
+            }
+            whatimg {
+                fluid{
+                    ...GatsbyPrismicImageFluid
+                }
+                alt
+            }
+            homepagetestimonials {
+                name {
+                    text
+                }
+                thumbnail {
+                    fluid{
+                        ...GatsbyPrismicImageFluid
+                    }
+                    alt
+                }
+                testimonial {
+                    html
+                }
+            }
+            backgroundimg {
+                fluid{
+                    ...GatsbyPrismicImageFluid
+                }
+                alt
+            }
+        }
+    }
+}
+`

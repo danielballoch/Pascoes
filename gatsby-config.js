@@ -75,6 +75,7 @@ module.exports = {
           // Provide an object of Prismic custom type JSON schemas to load into
           // Gatsby. This is required.
           schemas: {
+            index: require('./src/prismic-shemas/index.json'),
             contact: require('./src/prismic-shemas/contact.json'),
             services: require('./src/prismic-shemas/services.json'),
             about: require('./src/prismic-shemas/about.json'),

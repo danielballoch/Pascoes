@@ -1,0 +1,148 @@
+{
+    "Main" : {
+      "service" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "thumbnail" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "thumbnail"
+              }
+            },
+            "service1" : {
+              "type" : "StructuredText",
+              "config" : {
+                "single" : "heading2",
+                "label" : "service",
+                "placeholder" : "Maintenance Plumbing"
+              }
+            }
+          },
+          "label" : "service"
+        }
+      },
+      "why" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1",
+          "label" : "why",
+          "placeholder" : "Why Pascoe's?"
+        }
+      },
+      "why1" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+          "label" : "why1",
+          "placeholder" : "Pascoes Plumbing & Gas is dedicated to quality work and happy customers."
+        }
+      },
+      "whyindent" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+          "label" : "whyindent",
+          "placeholder" : "Our team is family - we show up on time with positive attitudes, a friendly smile and provide the right solution for your individual needs."
+        }
+      },
+      "why2" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+          "label" : "why2",
+          "placeholder" : "Play the short video to the right to see the full picture."
+        }
+      },
+      "whyimg" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "whyimg"
+        }
+      },
+      "what" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading2",
+          "label" : "what",
+          "placeholder" : "What to expect"
+        }
+      },
+      "what1" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+          "label" : "what1",
+          "placeholder" : "At Pascoes Plumbing & Gas we take pride in our values and think this shines through in our work."
+        }
+      },
+      "whatlist" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+          "label" : "whatlist",
+          "placeholder" : "Customer first approach     Timely and trustworthy     Respectful of property and surroundings     Well presented and professional"
+        }
+      },
+      "whatimg" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "whatimg"
+        }
+      },
+      "homepagetestimonials" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "thumbnail" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "thumbnail"
+              }
+            },
+            "name" : {
+              "type" : "StructuredText",
+              "config" : {
+                "single" : "heading2",
+                "label" : "name",
+                "placeholder" : "John Russo"
+              }
+            },
+            "testimonial" : {
+              "type" : "StructuredText",
+              "config" : {
+                "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                "label" : "testimonial",
+                "placeholder" : "\"Really friendly and great to work with, I had friends over last Friday after the new sink install and have already had comments on it.  Liam was quick to work and left the place tidy over the weekend before finishing the job on Monday, very happy with the job done.\""
+              }
+            }
+          },
+          "label" : "homepagetestimonials"
+        }
+      },
+      "contacttag" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+          "label" : "contacttag",
+          "placeholder" : "Our reply time is generally one business day, for a faster response please call 027 727 2639"
+        }
+      },
+      "backgroundimg" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "backgroundimg"
+        }
+      }
+    }
+  }

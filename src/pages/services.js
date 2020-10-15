@@ -63,12 +63,12 @@ class Services extends Component {
                 </div> */}
 
                 <div className="coverage">
-                    <div className="production_img"><Img alt={services.data.bottomimg.alt} fluid={services.data.bottomimg.fluid}/></div>
+                    <div className="production_img_nz"><Img alt={services.data.bottomimg.alt} fluid={services.data.bottomimg.fluid}/></div>
                     <div className="coverage_div">
                         <h2>Coverage</h2>
                         <p>We generally cover the wider Waikato region including Hamilton, Cambridge, Te Aroha and Te Awamuto.</p>
                         <p className="indent_green">We may make exception for certain jobs so don't hesitate to get in touch at 027 727 2639 or through the contact page.</p>
-                        <a href="#">Do you need council consent for your job?</a>
+                        <a href="https://www.building.govt.nz/assets/Uploads/projects-and-consents/building-work-consent-not-required-guidance.pdf">Do you need council consent for your job?</a>
                     </div>
                 </div>
             </div>

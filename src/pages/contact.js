@@ -39,7 +39,7 @@ class Contact extends Component {
                        
 
                         <label for="subject">Enquiry:</label>
-                        <textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
+                        <textarea id="subject" name="subject" placeholder="How can we help.." ></textarea>
                         {/* <p>Our reply time is generally one business day, for a faster response please call 027 727 2639.</p> */}
                         <input className="contact_btn2" type="submit" value="Send Message"/>
 
@@ -79,7 +79,7 @@ Contact.propTypes = {
     
 
 export const pageQuery = graphql`
-query IndexQuery {
+query ContactQuery {
     contact: prismicContact {
         data {
             header {
