@@ -76,6 +76,7 @@ module.exports = {
           // Gatsby. This is required.
           schemas: {
             contact: require('./src/prismic-shemas/contact.json'),
+            services: require('./src/prismic-shemas/services.json'),
             about: require('./src/prismic-shemas/about.json'),
             navigation: require('./src/prismic-shemas/navigation.json'),
             footer: require('./src/prismic-shemas/footer.json')

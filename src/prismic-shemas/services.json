@@ -1,0 +1,108 @@
+{
+    "Main": {
+      "heading": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "heading",
+          "placeholder": "Services"
+        }
+      },
+      "service": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "image"
+              }
+            },
+            "service1": {
+              "type": "StructuredText",
+              "config": {
+                "single": "heading1",
+                "label": "service",
+                "placeholder": "Maintenance Plumbing"
+              }
+            },
+            "bulletpoints": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                "label": "bulletpoints",
+                "placeholder": "- Blocked drains - Drain line repair & replacement - In wall video inspections - Under house / in ceiling plumbing repairs - High power bill problems"
+              }
+            },
+            "body1": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                "label": "body1",
+                "placeholder": "Service text... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras metus ex, vehicula non elementum eu, mattis ut tellus. In laoreet feugiat efficitur. Fusce ut felis accumsan, ullamcorper odio at, ullamcorper diam."
+              }
+            },
+            "indent": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                "label": "indent",
+                "placeholder": "Service text... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras metus ex, vehicula non elementum eu, mattis ut tellus. In laoreet feugiat efficitur. Fusce ut felis accumsan, ullamcorper odio at, ullamcorper diam."
+              }
+            },
+            "body2": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                "label": "body2",
+                "placeholder": "Closing hook showing you're the solution to their problem and eager to help."
+              }
+            }
+          },
+          "label": "service"
+        }
+      },
+      "bottomimg": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "bottomimg"
+        }
+      },
+      "bottomtitle": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "bottomtitle",
+          "placeholder": "Coverage"
+        }
+      },
+      "bottombody1": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+          "label": "bottombody1",
+          "placeholder": "We generally cover the wider Waikato region including Hamilton, Cambridge, Te Aroha and Te Awamuto."
+        }
+      },
+      "bottomindent": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+          "label": "bottomindent",
+          "placeholder": "We may make exception for certain jobs so don't hesitate to get in touch at 027 727 2639 or through the contact page."
+        }
+      },
+      "bottombody2": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+          "label": "bottombody2",
+          "placeholder": "Do you need council consent for your job?"
+        }
+      }
+    }
+  }

@@ -694,6 +694,14 @@ pre tt:after {
 
 /* Universal */
 
+.shadow_1 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.no_show {
+    display:none !important;
+}
+
 .max_width {
     max-width: 960px;
     margin: auto;
@@ -834,6 +842,9 @@ pre tt:after {
     margin: 10px;
     background-color: #F2F9FC;
 }
+.service:hover {
+    cursor: pointer;
+}
 
 .service p {
     margin: 0;
@@ -848,6 +859,10 @@ pre tt:after {
     align-items: center;
     color: white;
     padding: 10px;
+    transition: .3s;
+}
+.sh_active {
+    background-color: #0099E6 !important;
 }
 
 .service_summary {
@@ -867,6 +882,12 @@ pre tt:after {
     min-width:320px;
     min-height: 380px;
     background-color:#0099E6;
+}
+.production_img {
+    margin: 60px 20px;
+    min-width:360px;
+    min-height: 380px;
+    /* background-color:#0099E6; */
 }
 
 .service_content_body {
