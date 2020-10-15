@@ -18,7 +18,7 @@ class About extends Component {
         return(
             <Layout>
             <div className="max_width">
-                <SEO title="Page two" />
+                <SEO title="About" />
                 {/* <Img alt={about.data.image.alt} fluid={about.data.image.fluid}/>
                 <h1>{about.data.header.text}</h1> */}
                 <h1 className="hero_text">{about.data.title.text}</h1>

@@ -1,19 +1,42 @@
 {
-    "Main" : {
-      "header" : {
-        "type" : "StructuredText",
-        "config" : {
-          "single" : "heading1",
-          "label" : "Header",
-          "placeholder" : "Contact Us"
+    "Main": {
+      "header": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Header",
+          "placeholder": "Contact Us"
         }
       },
-      "image" : {
-        "type" : "Image",
-        "config" : {
-          "constraint" : { },
-          "thumbnails" : [ ],
-          "label" : "image"
+      "body": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "body",
+          "placeholder": "Pascoes offer a wide variety of plumbing & gas services and are happy to help. Contact us through the form or details below and we'll be in touch to start your project."
+        }
+      },
+      "phone": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "Phone",
+          "placeholder": "Ph: 027 727 2639"
+        }
+      },
+      "email": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "Email",
+          "placeholder": "liam@pascoesplumbing.co.nz"
+        }
+      },
+      "submittext": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "submittext"
         }
       }
     }

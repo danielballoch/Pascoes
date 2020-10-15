@@ -13,7 +13,7 @@ class Services extends Component {
         return (
             <Layout >
             <div className="max_width">
-                <SEO title="Page two" />
+                <SEO title="Services" />
                 <h1 className="hero_text">Services</h1>
                 <div className="services">
                     {servicelist.map((value, i) => (
@@ -39,7 +39,7 @@ class Services extends Component {
                     </div>
                 </div>
                 <div className="coverage">
-                    <div className="placeholder_img">coverage image</div>
+                    <div className="placeholder_img"></div>
                     <div className="coverage_div">
                         <h2>Coverage</h2>
                         <p>We generally cover the wider Waikato region including Hamilton, Cambridge, Te Aroha and Te Awamuto.</p>

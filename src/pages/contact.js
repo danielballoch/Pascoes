@@ -15,18 +15,36 @@ class Contact extends Component {
         console.log(this.props)
         return(
             <Layout>
-            <SEO title="Page two" />
-            <Img alt={contact.data.image.alt} fluid={contact.data.image.fluid}/>
-            <h1>{contact.data.header.text}</h1>
-            <p>
-            What is Lorem Ipsum?
+                <div className="max_width">
+                    <SEO title="Contact" />
+                    <h1 className="hero_text">{contact.data.header.text}</h1>
 
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-            <p>
-            Why do we use it?
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            </p>
+                    <div className="contact_us">
+                    <div className="contact_us_body box_shadow">{contact.data.body.text}</div>
+                    <div className="contact_us_details">
+                        <a>{contact.data.phone.text}</a><a>{contact.data.email.text}</a>
+                    </div>
+                    </div>
+
+                    <form className="contact_form2">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your name.."/>
+
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="Your email.."/>
+
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" placeholder="Your phone number.."/>
+
+                       
+
+                        <label for="subject">Enquiry:</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
+                        {/* <p>Our reply time is generally one business day, for a faster response please call 027 727 2639.</p> */}
+                        <input className="contact_btn2" type="submit" value="Send Message"/>
+
+                    </form>
+                </div>
             </Layout>
         )
     }
@@ -40,21 +58,19 @@ Contact.propTypes = {
                 header: PropTypes.shape({
                     text: PropTypes.string.isRequired
                 }),
-                image: PropTypes.shape({
-                    fluid: PropTypes.shape({
-                        aspectRatio: PropTypes.number.isRequired,
-                        src: PropTypes.string.isRequired,
-                        srcSet: PropTypes.string.isRequired,
-                        sizes: PropTypes.string.isRequired,
-                        base64: PropTypes.string,
-                        tracedSVG: PropTypes.string,
-                        srcWebp: PropTypes.string,
-                        srcSetWebp: PropTypes.string,
-                        media: PropTypes.string,
-                        maxWidth: PropTypes.number,
-                        maxHeight: PropTypes.number,
-                    })
-                })
+                body: PropTypes.shape({
+                    text: PropTypes.string.isRequired
+                }),
+                phone: PropTypes.shape({
+                    text: PropTypes.string.isRequired
+                }),
+                email: PropTypes.shape({
+                    text: PropTypes.string.isRequired
+                }),
+                submittext: PropTypes.shape({
+                    text: PropTypes.string.isRequired
+                }),
+                
             })
         })
 
@@ -69,11 +85,17 @@ query IndexQuery {
             header {
                 text
             }
-            image{
-                alt
-                fluid{
-                    ...GatsbyPrismicImageFluid
-                }
+            body {
+                text
+            }
+            phone {
+                text
+            }
+            email{
+                text
+            }
+            submittext {
+                text
             }
         }
     }

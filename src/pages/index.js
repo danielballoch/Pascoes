@@ -102,7 +102,7 @@ class Index extends Component {
 
                         <label for="subject">Enquiry:</label>
                         <textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
-                        <p>Our reply time is generally one business day, for a faster response please call 022 727 2639  </p>
+                        <p>Our reply time is generally one business day, for a faster response please call 027 727 2639  </p>
                         <input className="contact_btn" type="submit" value="Send"/>
 
                     </form>
