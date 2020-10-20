@@ -639,6 +639,7 @@ pre tt:after {
 
 /* footer */
 .footer {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -648,7 +649,7 @@ pre tt:after {
     background: white;
     background-color: #006699;
     color: white;
-    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05); */
+    /* z-index: 200; */
     height: 400px;
     font-family: 'Open Sans';
     font-size: 18px;
@@ -710,6 +711,9 @@ pre tt:after {
 .box_shadow {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
+.box_shadow2 {
+    box-shadow: 0 -3px -6px rgba(0, 0, 0, 0.05);
+}
 
 .hero_text {
  color: #444444;
@@ -724,6 +728,13 @@ pre tt:after {
     margin-top: 40px;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 750px) {
+    .double_content {
+        flex-direction: column;
+        background-color: blue;
+    }
 }
 
 .text_card {
@@ -791,7 +802,7 @@ pre tt:after {
     margin: auto;
     border-radius: 25px 25px 0 0;
     height: 100%;
-    width: 960px;
+    max-width: 960px;
     background-color: #ffffff;
 
 }
@@ -1067,6 +1078,10 @@ color: #0175A8;
     max-height: 140px;
 }
 
+.indx_testimonials_body {
+    font-size: 16px;
+}
+
 /* contact1 */
 
 .contact {
@@ -1074,6 +1089,14 @@ color: #0175A8;
     justify-content: center;
     align-items: center;
     height: 800px;
+     /* background-attachment: absolute; */
+     
+     /*
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    -webkit-perspective: 300px;
+    perspective: 300px;
 }
 
 .contact_form {
@@ -1213,4 +1236,48 @@ padding: 30px;
 .contact_form2 textarea {
     padding: 4px;
     border-color: rgba(0,153,230,0.2);
+}
+
+
+/* test parallax */
+
+.parallax {
+    perspective: 300px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+.bg1 {
+    background: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg)
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+
+.parallax__layer--back {
+    transform: translateZ(-200px) scale(2);
+}
+
+.test {
+    height: 800px;
+    background: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg);
+}
+.test2 {
+ background-color: lightskyblue;
+ width: 400px;
+ height: 600px;
 }

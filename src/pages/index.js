@@ -70,7 +70,7 @@ class Index extends Component {
                             <div className="profile_name">
                                 {value.name.text}
                             </div>
-                            <div
+                            <div className="indx_testimonials_body"
                                     dangerouslySetInnerHTML={{ __html: `${value.testimonial.html}` }}
                                 /> 
                             
