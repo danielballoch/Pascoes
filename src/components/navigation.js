@@ -1,10 +1,11 @@
-import React, {Component} from "react"
+import React, {Component, useState} from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
 
 
 const Navigation = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
     return (          
         <StaticQuery
         query={graphql`
@@ -39,7 +40,10 @@ const Navigation = () => {
                     <Link to="/contact" className="nav_link">
                     Contact
                     </Link>
+                    <button className="nav_menu_btn" onClick={() => setMenuOpen(!menuOpen)}>menu</button>
                 </div>
+                <div className={menuOpen ? "nav_menu" : "nav_menu_closed"}></div>
+                <div className={menuOpen ? "nav_dim" : ""}></div>
             </header>
          )}
       />

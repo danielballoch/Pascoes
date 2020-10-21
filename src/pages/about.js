@@ -49,7 +49,7 @@ class About extends Component {
                 </div>
                 {/* <div className="testimonials_bar"> */}
                     <div className="reviewers">
-                        <div className={this.state.activeTestimonial===0? "profile active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 0})}>
+                        <div className={this.state.activeTestimonial===0? "active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 0})}>
                             <div className="profile_image" >
                                 <Img fluid={about.data.testimonials[0].profileimage.fluid} alt={about.data.testimonials[0].profileimage.alt}/>
                             </div>
@@ -57,7 +57,7 @@ class About extends Component {
                                 {about.data.testimonials[0].profilename.text}
                             </div>
                         </div>
-                        <div className={this.state.activeTestimonial===1? "profile active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 1})}>
+                        <div className={this.state.activeTestimonial===1? "active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 1})}>
                             <div className="profile_image" >
                                 <Img fluid={about.data.testimonials[1].profileimage.fluid} alt={about.data.testimonials[1].profileimage.alt}/>
                             </div>
@@ -65,7 +65,7 @@ class About extends Component {
                                 {about.data.testimonials[1].profilename.text}
                             </div>
                         </div>
-                        <div className={this.state.activeTestimonial===2? "profile active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 2})}>
+                        <div className={this.state.activeTestimonial===2? "active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 2})}>
                             <div className="profile_image">
                                 <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/>
                             </div>
