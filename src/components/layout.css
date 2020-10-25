@@ -631,7 +631,7 @@ pre tt:after {
 }
 
 .nav_logo {
-    transition: 1s;
+    transition: .3s;
     height: 100%;
     width: 150px;
 }
@@ -728,6 +728,7 @@ pre tt:after {
 
 .double_content {
     margin-top: 40px;
+    
     display: flex;
     align-items: center;
 }
@@ -938,7 +939,8 @@ pre tt:after {
 
 /* index */
 
-.hero_text2 {
+.indx_hero_text {
+    transition: .3s;
 color: #0175A8;
  font: Open Sans;
  font-size: 145px;
@@ -946,6 +948,16 @@ color: #0175A8;
  text-align: center;
  margin-top: 60px;
  margin-bottom: -90px;
+}
+
+.indx_hero_text2 {
+    transition: .3s;
+    color: #444444;
+    font: Open Sans;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 60px;
 }
 
 .indx_services {
@@ -970,12 +982,15 @@ color: #0175A8;
 }
 
 .indx_service{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     max-width: 240px;
     text-align: center;
 }
 
 .why {
-    height: 800px;
+    min-height: 800px;
     width: 100%;
     background-color: #0099E6;
 }
@@ -990,7 +1005,8 @@ color: #0175A8;
 }
 
 .expect {
-    height: 680px;
+    padding: 8px;
+    min-height: 680px;
     width: 100%;
     background-color: #ffffff;
 }
@@ -1034,7 +1050,7 @@ color: #0175A8;
 
 .indx_testimonials {
     background-color: #006699;
-    height: 800px;
+    min-height: 800px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1490,6 +1506,64 @@ padding: 30px;
     .production_img_nz {
         display: none;
     }
+    /* index */
+
+    .indx_hero_text {
+        font-size: 77px;
+        margin-bottom: -77px;
+    }
+    .indx_hero_text2 {
+        font-size: 42px;
+    }
+
+    .place_serviceimg {
+        margin: auto;
+        width: 120px;
+        height: 120px;
+        /* height: 140px; */
+    }
+    .place_serviceimg img {
+        
+        max-height: 120px;
+    }
+
+    .indx_services {
+        margin: 60px auto;
+    }
+    .indx_service h2 {
+        font-size: 1.2rem;
+    }
+
+    .why {
+
+    }
+    .why_title {
+       font-size: 50px; 
+    }
+   
+    .profile_card{
+        display: none;
+    }
+    .profile_active {
+        display: flex;
+    }
+
+    .placeholder_img2 {
+        /* min-width: 200px; */
+        /* min-height:200px; */
+        min-height: 200px;
+        min-width: 200px;
+        width: 100vw;
+        padding: 10px;
+    }
+    .indx_testimonials {
+        min-height: 600px;
+    }
+
+    .contact_form {
+        margin: 4px;
+    }
+ 
 
     
 }

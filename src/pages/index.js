@@ -18,8 +18,8 @@ class Index extends Component {
         return(
         <Layout path={this.props.location.pathname}>
             <SEO title="Home" />
-            <h1 className="hero_text2">PASCOE'S</h1>
-            <h1 className="hero_text">Plumbing & Gas</h1>
+            <h1 className="indx_hero_text">PASCOE'S</h1>
+            <h1 className="indx_hero_text2">Plumbing & Gas</h1>
             <div className="indx_services max_width">
                 {index.data.service.map((value, i) => (
                     <div className="indx_service">
