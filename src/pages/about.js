@@ -14,9 +14,8 @@ class About extends Component {
         const {
             data: {about},
         } = this.props
-        console.log(this.props)
         return(
-            <Layout>
+            <Layout path={this.props.location.pathname}>
             <div className="max_width">
                 <SEO title="About" />
                 {/* <Img alt={about.data.image.alt} fluid={about.data.image.fluid}/>

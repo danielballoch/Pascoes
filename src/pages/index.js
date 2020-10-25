@@ -16,7 +16,7 @@ class Index extends Component {
         } = this.props
         console.log(this.props)
         return(
-        <Layout>
+        <Layout path={this.props.location.pathname}>
             <SEO title="Home" />
             <h1 className="hero_text2">PASCOE'S</h1>
             <h1 className="hero_text">Plumbing & Gas</h1>

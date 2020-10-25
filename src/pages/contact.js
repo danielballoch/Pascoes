@@ -14,7 +14,7 @@ class Contact extends Component {
         } = this.props
         console.log(this.props)
         return(
-            <Layout>
+            <Layout path={this.props.location.pathname}>
                 <div className="max_width">
                     <SEO title="Contact" />
                     <h1 className="hero_text">{contact.data.header.text}</h1>

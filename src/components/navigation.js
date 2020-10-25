@@ -4,9 +4,9 @@ import PropTypes from "prop-types"
 import Img from "gatsby-image"
 
 
-const Navigation = () => {
+const Navigation = ({ path }) => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [activePage, setActivePage] = useState(window.location.pathname);
+    const [activePage, setActivePage] = useState(path);
     const pages = ["Home", "Services","About", "Contact"];
     const pagesLinks = ["/", "/services/", "/about/", "/contact/"]
     console.log(activePage);

@@ -22,7 +22,7 @@ class Services extends Component {
         } = this.props
         console.log(this.props)
         return (
-            <Layout >
+            <Layout path={this.props.location.pathname}>
             <div className="max_width">
                 <SEO title="Services" />
                 <h1 className="hero_text">{services.data.heading.text}</h1>
