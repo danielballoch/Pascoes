@@ -854,6 +854,7 @@ pre tt:after {
 .services {
     display: flex;
     flex-direction: row;
+    overflow: scroll;
 }
 .service {
     min-width: 300px;
@@ -1307,6 +1308,10 @@ padding: 30px;
     overflow: hidden;
 }
 
+.hamburger {
+    display: none;
+}
+
 
 @media (max-width: 750px) {
     /*about mobile*/
@@ -1323,14 +1328,13 @@ padding: 30px;
         display: block;
     }
     .hamburger {
-        padding: 15px;
-        display: inline-block;
-        cursor: pointer;
+        
 
+        padding: 15px;
+        cursor: pointer;
         transition-property: opacity, filter;
         transition-duration: 0.15s;
         transition-timing-function: linear;
-
         font: inherit;
         color: inherit;
         text-transform: none;
@@ -1461,6 +1465,33 @@ padding: 30px;
         opacity: 20%;
     }
 
+    .hamburger {
+        display: block;
+    }
+    .nav_logo {
+        width: 100px;
+        margin-left: -10px;
+    }
+    .service_content {
+        flex-direction: column-reverse;
+    }
+
+    .service_content_body {
+        margin-bottom: 0;
+    }
+
+    .production_img {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .coverage {
+        flex-direction: column-reverse;
+    }
+    .production_img_nz {
+        display: none;
+    }
+
     
 }
 
@@ -1472,10 +1503,7 @@ padding: 30px;
         font-size: 15px;
     }
 
-    .nav_logo {
-        width: 100px;
-        margin-left: -10px;
-    }
+    
     .nav-div {
         padding: 0 30px;
     }
@@ -1484,4 +1512,6 @@ padding: 30px;
         flex-direction: column;
         padding: 10px;
     }
+
+    
 }
