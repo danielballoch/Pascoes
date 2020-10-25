@@ -6,6 +6,10 @@ import Img from "gatsby-image"
 
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [activePage, setActivePage] = useState(window.location.pathname);
+    const pages = ["Home", "Services","About", "Contact"];
+    const pagesLinks = ["/", "/services/", "/about/", "/contact/"]
+    console.log(activePage);
     return (          
         <StaticQuery
         query={graphql`
@@ -25,6 +29,8 @@ const Navigation = () => {
             <header className='nav'>
                   {console.log(data)}
                 <div className='nav-div'>
+
+                
                     <Link to="/" className="nav_link">
                     Home
                     </Link>
@@ -40,9 +46,19 @@ const Navigation = () => {
                     <Link to="/contact" className="nav_link">
                     Contact
                     </Link>
-                    <button className="nav_menu_btn" onClick={() => setMenuOpen(!menuOpen)}>menu</button>
+                    <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                        <span className="hamburger-box">
+                            <span className={menuOpen ? "hamburger-inner hamburger-inner-active" : "hamburger-inner"}></span>
+                        </span>
+                    </button>
                 </div>
-                <div className={menuOpen ? "nav_menu" : "nav_menu_closed"}></div>
+                <div className={menuOpen ? "nav_menu" : "nav_menu_closed"}>             
+                    <div className="nav_menu_links">
+                    {pages.map((service, i) => (
+                        <Link className={activePage === pagesLinks[i] ? "active_nav" : ""} to={pagesLinks[i]}>{service}</Link>
+                    ))}
+                    </div>
+                </div>
                 <div className={menuOpen ? "nav_dim" : ""}></div>
             </header>
          )}
