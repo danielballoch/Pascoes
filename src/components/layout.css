@@ -817,12 +817,13 @@ pre tt:after {
     /* background-color: rgb(192, 192, 172); */
     font-size: larger;
     padding: 10px;
+    transition: .3s;
 }
 .profile:hover {
     /* transform: scale(0.95); */
     background-color:  #F2F9FC;
     cursor: pointer;
-    transition: .3s;
+    
 }
 .profile_name {
     padding-left: 18px;
@@ -1050,18 +1051,79 @@ color: #0175A8;
     width: 100%;
 }
 
+.slider_container {
+    margin: auto;
+    background-color: #006699;
+    max-width: 1280px;
+    min-height: 800px;
+}
+
+.testimonials_container {
+    width: 100%;
+    background-color: #006699;
+    max-height: 860px;
+}
+
+.slick-slide {
+    transition: 1s;
+}
+
+.slick-current {
+    transition: 1s;
+    
+}
+
+.slick-current .slider_profile {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transform: translateY(0px);
+    opacity: 100% !important;
+    /* transform: scale(1.1); */
+}
+
+.slick-active .slider_profile {
+    opacity: 80%;
+}
+
+.slider_profile {
+    opacity: 0% ;
+    transform: translateY(10px);
+    margin: 100px 40px 40px 40px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* height: 100%; */
+    max-height:500px;
+    max-width: 400px;
+    /* width: 100%; */
+    background-color: #FFFFFF;
+    font-size: larger;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: .6s;
+}
+
+.slick-dots li button::before {
+    color: white !important;
+}
+
+
+
 .indx_testimonials {
     background-color: #006699;
-    min-height: 800px;
+    min-height: 600px;
+    max-height: 600px;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 
 .profile_card {
     margin: 0 30px;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1072,7 +1134,7 @@ color: #0175A8;
     background-color: #FFFFFF;
     opacity: 90%;
     font-size: larger;
-    /* padding: 10px; */
+    padding: 10px; 
     border-radius: 25px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     transition: .6s;
@@ -1536,9 +1598,6 @@ padding: 30px;
         font-size: 1.2rem;
     }
 
-    .why {
-        
-    }
     .why_title {
        font-size: 50px; 
     }

@@ -12,6 +12,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Nav from "./navigation"
 import Footer from "./footer"
 import "./layout.css"
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const Layout = ({ children, path }) => {
   const data = useStaticQuery(graphql`

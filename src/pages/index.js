@@ -7,6 +7,23 @@ import BackgroundImage from 'gatsby-background-image'
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Slider from "react-slick";
+
+function Slide(props) { 
+    return (
+        <div className={props.i == 1? "slider_profile box_shadow" : "slider_profile box_shadow"}>
+            <div className="profile_image_placeholder box_shadow">
+                <Img fluid={props.thumbnail} alt={props.alt}/>
+            </div>
+            <div className="profile_name">
+                {props.text}
+            </div>
+            <div className="indx_testimonials_body"
+                    dangerouslySetInnerHTML={{ __html: `${props.html}` }}
+                /> 
+        </div>
+    )
+}
 
 class Index extends Component {
     render(){
@@ -15,6 +32,19 @@ class Index extends Component {
             data: {index},
         } = this.props
         console.log(this.props)
+
+        var settings = {
+            className: "center",
+            centerMode: true,
+            centerPadding: "60px",
+            slidesToShow: 3,
+            dots: true,
+            arrows: false,
+            speed: 500
+        }
+
+        
+
         return(
         <Layout path={this.props.location.pathname}>
             <SEO title="Home" />
@@ -60,9 +90,22 @@ class Index extends Component {
                 </div>
             </div>
             <div className="blend_bar"/>
-            <div className="indx_testimonials">
 
-            {index.data.homepagetestimonials.map((value, i) => (
+            <div className="testimonials_container">
+            <h1 className="why_title">Our Customers</h1>
+                <div className="slider_container">
+                    <Slider {...settings}>
+                        {index.data.homepagetestimonials.map((value,i) => (
+                            <Slide thumbnail={value.thumbnail.fluid} alt={value.thumbnail.alt} text={value.name.text} html={value.testimonial.html} i={i}/>
+                        ))}
+                    </Slider>
+                </div>
+            </div>
+
+            
+            {/* <div className="indx_testimonials"> */}
+
+            {/* {index.data.homepagetestimonials.slice(0,3).map((value, i) => (
                 <div className="profile_card box_shadow"className={i == 1? "profile_card box_shadow profile_active" : "profile_card box_shadow"}>
                             <div className="profile_image_placeholder box_shadow">
                             <Img fluid={value.thumbnail.fluid} alt={value.thumbnail.alt}/>
@@ -75,7 +118,9 @@ class Index extends Component {
                                 /> 
                             
                     </div>
-                    ))}
+                    ))} */}
+
+
                     {/* <div className="profile_card box_shadow">
                             <div className="profile_image_placeholder box_shadow">
                              <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/> 
@@ -105,7 +150,7 @@ class Index extends Component {
                             <p>"Brillient testimonial dui ac enim tincidunt suscipit. Nulla facilisi. Nunc in nulla elit. Quisque quis dolor ornare, consequat mauris sed, iaculis nibh. Ut ante nulla, maximus non feugiat nec, suscipit sed ipsum."</p>
                     </div>
                     */}
-            </div>
+            {/* </div> */}
             <BackgroundImage className="contact"
             fluid={index.data.backgroundimg.fluid}
             >
