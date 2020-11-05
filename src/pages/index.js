@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from 'gatsby-background-image'
+import {Parallax, Background} from 'react-parallax'
 
 
 import Layout from "../components/layout"
@@ -116,60 +117,32 @@ class Index extends Component {
                 </div>
             </div>
 
-            
-            {/* <div className="indx_testimonials"> */}
-
-            {/* {index.data.homepagetestimonials.slice(0,3).map((value, i) => (
-                <div className="profile_card box_shadow"className={i == 1? "profile_card box_shadow profile_active" : "profile_card box_shadow"}>
-                            <div className="profile_image_placeholder box_shadow">
-                            <Img fluid={value.thumbnail.fluid} alt={value.thumbnail.alt}/>
-                            </div>
-                            <div className="profile_name">
-                                {value.name.text}
-                            </div>
-                            <div className="indx_testimonials_body"
-                                    dangerouslySetInnerHTML={{ __html: `${value.testimonial.html}` }}
-                                /> 
-                            
-                    </div>
-                    ))} */}
-
-
-                    {/* <div className="profile_card box_shadow">
-                            <div className="profile_image_placeholder box_shadow">
-                             <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/> 
-                            </div>
-                            <div className="profile_name">
-                                John Russo
-                            </div>
-                            <p>"Brillient testimonial dui ac enim tincidunt suscipit. Nulla facilisi. Nunc in nulla elit. Quisque quis dolor ornare, consequat mauris sed, iaculis nibh. Ut ante nulla, maximus non feugiat nec, suscipit sed ipsum."</p>
-                    </div> 
-                    
-                    <div className="profile_card profile_active">
-                            <div className="profile_image_placeholder box_shadow">
-                            {/* <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/> 
-                            </div>
-                            <div className="profile_name">
-                                John Russo
-                            </div>
-                            <p>"Brillient testimonial dui ac enim tincidunt suscipit. Nulla facilisi. Nunc in nulla elit. Quisque quis dolor ornare, consequat mauris sed, iaculis nibh. Ut ante nulla, maximus non feugiat nec, suscipit sed ipsum."</p>
-                    </div>
-                    <div className="profile_card">
-                            <div className="profile_image_placeholder">
-                            {/* <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/> 
-                            </div>
-                            <div className="profile_name">
-                                John Russo
-                            </div>
-                            <p>"Brillient testimonial dui ac enim tincidunt suscipit. Nulla facilisi. Nunc in nulla elit. Quisque quis dolor ornare, consequat mauris sed, iaculis nibh. Ut ante nulla, maximus non feugiat nec, suscipit sed ipsum."</p>
-                    </div>
-                    */}
-            {/* </div> */}
-            <BackgroundImage className="contact"
+            {/* <BackgroundImage className="contact"
             fluid={index.data.backgroundimg.fluid}
-            >
+            > */}
             {/* <div className="contact_form"> */}
-                    <form className="contact_form shadow_1">
+                    {/* <form className="contact_form shadow_1">
+                        <h2>Contact Now</h2>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your name.."/>
+
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" placeholder="Your phone number.."/>
+
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="Your email.."/>
+
+                        <label for="subject">Enquiry:</label>
+                        <textarea id="subject" name="subject" placeholder="How can we help.." ></textarea>
+                        <p>Our reply time is generally one business day, for a faster response please call 027 727 2639  </p>
+                        <input className="contact_btn" type="submit" value="Send"/>
+
+                    </form> */}
+                
+            {/* </BackgroundImage> */}
+
+            <Parallax strength={300} bgImage={index.data.backgroundimg.fixed.src} className="contact" bgClassName="parallax-bg">
+            <form className="contact_form shadow_1">
                         <h2>Contact Now</h2>
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" placeholder="Your name.."/>
@@ -186,8 +159,7 @@ class Index extends Component {
                         <input className="contact_btn" type="submit" value="Send"/>
 
                     </form>
-                
-            </BackgroundImage>
+            </Parallax>
             
             
         </Layout>
@@ -263,6 +235,10 @@ query IndexQuery {
             backgroundimg {
                 fluid{
                     ...GatsbyPrismicImageFluid
+                    src
+                }
+                fixed (width: 1920){
+                    src
                 }
                 alt
             }

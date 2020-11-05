@@ -940,6 +940,11 @@ pre tt:after {
 
 /* index */
 
+.parallax-bg {
+    object-fit: cover;
+    object-position: 100% 0;
+}
+
 .indx_hero_text {
     transition: .3s;
 color: #0175A8;
