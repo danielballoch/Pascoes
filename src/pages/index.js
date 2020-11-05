@@ -35,9 +35,11 @@ class Index extends Component {
 
         var settings = {
             className: "center",
+            useTransform: true,
             centerMode: true,
             centerPadding: "60px",
             slidesToShow: 3,
+            slidesToScroll: 3,
             dots: true,
             arrows: false,
             speed: 500
@@ -52,10 +54,10 @@ class Index extends Component {
             <h1 className="indx_hero_text2">Plumbing & Gas</h1>
             <div className="indx_services max_width">
                 {index.data.service.map((value, i) => (
-                    <div className="indx_service">
+                    <Link to="/services" className="indx_service">
                         <div className="place_serviceimg"><Img alt={value.thumbnail.alt} fluid={value.thumbnail.fluid}/></div>
                         <h2>{value.service1.text}</h2>
-                    </div>
+                    </Link>
                     
                     ))}
             </div>

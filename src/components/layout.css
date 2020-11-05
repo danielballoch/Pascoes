@@ -971,6 +971,7 @@ color: #0175A8;
 }
 .indx_services h2 {
     font-weight: 300;
+    transition: .3s;
 }
 
 .place_serviceimg {
@@ -978,6 +979,7 @@ color: #0175A8;
     max-height:240px;
     background-color: #0099E6;
     border-radius: 300px;
+    
 }
 .place_serviceimg img {
     border-radius: 800px;
@@ -985,12 +987,22 @@ color: #0175A8;
 }
 
 .indx_service{
+    text-decoration: none;
+    color: #444444;
     display: flex;
     justify-content: center;
     flex-direction: column;
     max-width: 240px;
     text-align: center;
+    
 }
+.indx_service:hover {
+    cursor: pointer;
+}
+.indx_service:hover h2{
+    color: #0175a8;
+}
+
 
 .why {
     min-height: 800px;
@@ -1054,7 +1066,7 @@ color: #0175A8;
 .slider_container {
     margin: auto;
     background-color: #006699;
-    max-width: 1280px;
+    max-width: 1200px;
     min-height: 800px;
 }
 
@@ -1065,11 +1077,11 @@ color: #0175A8;
 }
 
 .slick-slide {
-    transition: 1s;
+    transition: .6s;
 }
 
 .slick-current {
-    transition: 1s;
+    transition: .6s;
     
 }
 
@@ -1082,12 +1094,14 @@ color: #0175A8;
 
 .slick-active .slider_profile {
     opacity: 80%;
+    
 }
 
 .slider_profile {
-    opacity: 0% ;
+    opacity: 80% ;
     transform: translateY(10px);
-    margin: 100px 40px 40px 40px;
+    margin: 100px 60px 40px 60px;
+    padding: 10px;
     display: flex !important;
     flex-direction: column;
     justify-content: center;
@@ -1095,14 +1109,15 @@ color: #0175A8;
     text-align: center;
     /* height: 100%; */
     max-height:500px;
-    max-width: 400px;
-    /* width: 100%; */
+    max-width: 480px;
+    /* width: 80%; */
     background-color: #FFFFFF;
     font-size: larger;
-    padding: 10px;
+    
     border-radius: 25px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    transition: .6s;
+    transition: .3s;
+    transition-delay: .5s;
 }
 
 .slick-dots li button::before {
