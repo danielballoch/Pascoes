@@ -856,7 +856,14 @@ pre tt:after {
 .services {
     display: flex;
     flex-direction: row;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* -ms-overflow-style: none;  
+    scrollbar-width: none;   */
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG)
 }
 .service {
     min-width: 300px;
