@@ -33,6 +33,8 @@ class Index extends Component {
         } = this.props
         console.log(this.props)
 
+        
+
         var settings = {
             className: "center",
             useTransform: true,
@@ -42,7 +44,17 @@ class Index extends Component {
             slidesToScroll: 3,
             dots: true,
             arrows: false,
-            speed: 500
+            speed: 500,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+            ]     
+            
         }
 
         

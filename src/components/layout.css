@@ -1666,3 +1666,12 @@ padding: 30px;
 
     
 }
+
+@media (max-width: 1200px){
+    .slider_profile {
+        margin: 80px auto 40px auto;
+    }
+    .slick-slide {
+        padding: 2px;
+    }
+}
