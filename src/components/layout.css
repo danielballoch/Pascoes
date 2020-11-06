@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Open Sans', serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -612,7 +612,7 @@ pre tt:after {
     color: #444444;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     height: 126px;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
 }
 .nav-div {
@@ -652,7 +652,7 @@ pre tt:after {
     color: white;
     /* z-index: 200; */
     height: 400px;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
 }
 .footer-nav {
