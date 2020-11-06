@@ -1418,14 +1418,15 @@ padding: 30px;
     display: none;
 }
 
+.mobile_border {
+    display: none;
+}
+
 
 @media (max-width: 750px) {
     /*about mobile*/
     .double_content {
         flex-direction: column;
-    }
-    .profile {
-        display: none;
     }
     .nav_link {
         display:none;
@@ -1674,6 +1675,19 @@ padding: 30px;
     .contact_us_details {
         flex-direction: column;
         padding: 10px;
+    }
+
+    .testimonials_text {
+        border-top: none;
+        padding: 0 3% 3% 3%;
+    }
+
+    .mobile_border {
+        display: block;
+        margin: 0 auto 40px auto;
+        height  : 20px;
+        width   : 80%;
+        background-color: #e64d00;
     }
 
     

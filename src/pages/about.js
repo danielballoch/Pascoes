@@ -26,7 +26,8 @@ var settings = {
 function TestimonialSlider(props){
     return (
         <div className="testimonials_text">
-                    <div
+                    <div className="mobile_border"/>
+                    <div 
                         dangerouslySetInnerHTML={{ __html: `${props.html}` }}
                     /> 
         </div>
@@ -91,7 +92,7 @@ class About extends Component {
                     
                 </div>
             </div>
-            <h1 className="hero_text">{about.data.title2.text}</h1>
+            {/* <h1 className="hero_text">{about.data.title2.text}</h1>
             <div className="testimonials">
                 <div className="testimonials_text">
                     <div
@@ -110,7 +111,7 @@ class About extends Component {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
 
 
             <h1 className="hero_text">{about.data.title2.text}</h1>
