@@ -1100,17 +1100,17 @@ color: #0175A8;
 .slick-current .slider_profile {
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     transform: translateY(0px);
-    opacity: 100% !important;
+    opacity: 1 !important;
     /* transform: scale(1.1); */
 }
 
 .slick-active .slider_profile {
-    opacity: 80%;
+    opacity: 0.8;
     
 }
 
 .slider_profile {
-    opacity: 80% ;
+    opacity: 0.8 ;
     transform: translateY(10px);
     margin: 100px 60px 40px 60px;
     padding: 10px;
@@ -1169,10 +1169,10 @@ color: #0175A8;
 }
 .profile_card:hover {
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    opacity: 100%;
+    opacity: 1;
 }
 .profile_active {
-    opacity: 100%;
+    opacity: 1;
     margin-top: 0px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
@@ -1253,7 +1253,7 @@ color: #0175A8;
 }
 
 .contact_btn {
-    opacity: 90%;
+    opacity: 0.9;
     background-color:#0099E6;
     border-radius: 12px;
     color: white;
@@ -1568,7 +1568,7 @@ padding: 30px;
         width: 100vw;
         height: 100vh;
         background-color: black;
-        opacity: 20%;
+        opacity: 0.2;
     }
 
     .hamburger {
