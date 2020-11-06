@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 
 
 
+
 class Services extends Component { 
     constructor(props){
         super(props)
@@ -50,6 +51,8 @@ class Services extends Component {
                     </div>
                     </div>
                 ))}
+
+                
 
 {/* 
                 <div className="service_content box_shadow no_show">

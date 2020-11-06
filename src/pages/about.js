@@ -4,12 +4,64 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Slider from "react-slick";
+
+var settings = {
+    centerMode: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    focusOnSelect: true,
+    responsive: [
+        {
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }
+    ] 
+}
+
+function TestimonialSlider(props){
+    return (
+        <div className="testimonials_text">
+                    <div
+                        dangerouslySetInnerHTML={{ __html: `${props.html}` }}
+                    /> 
+        </div>
+    )
+}
+function Slide(props) { 
+    return (
+        <div className={"profile"} >
+        <div className="profile_image" >
+            <Img fluid={props.profileimage} alt={props.alt}/>
+        </div>
+        <div className="profile_name">
+            {props.profilename}
+        </div>
+    </div>
+    )
+}
 
 class About extends Component {
     constructor(props){
         super(props)
-        this.state = {activeTestimonial: 1 }
+        this.state = {
+            activeTestimonial: 1,
+            nav1: null,
+            nav2: null
+        };
     }
+
+    componentDidMount() {
+        this.setState({
+            nav1: this.slider1,
+            nav2: this.slider2
+          });
+    }
+
     render(){
         const {
             data: {about},
@@ -46,35 +98,42 @@ class About extends Component {
                         dangerouslySetInnerHTML={{ __html: `${about.data.testimonials[this.state.activeTestimonial].testimonialtext.html}` }}
                     /> 
                 </div>
-                {/* <div className="testimonials_bar"> */}
-                    <div className="reviewers">
-                        <div className={this.state.activeTestimonial===0? "active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 0})}>
+                <div className="reviewers">
+                    {about.data.testimonials.slice(0,3).map((testimonial, i) => (
+                        <div className={this.state.activeTestimonial===i? "active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: i})}>
                             <div className="profile_image" >
-                                <Img fluid={about.data.testimonials[0].profileimage.fluid} alt={about.data.testimonials[0].profileimage.alt}/>
+                                <Img fluid={testimonial.profileimage.fluid} alt={about.data.testimonials[i].profileimage.alt}/>
                             </div>
                             <div className="profile_name">
-                                {about.data.testimonials[0].profilename.text}
+                                {about.data.testimonials[i].profilename.text}
                             </div>
                         </div>
-                        <div className={this.state.activeTestimonial===1? "active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 1})}>
-                            <div className="profile_image" >
-                                <Img fluid={about.data.testimonials[1].profileimage.fluid} alt={about.data.testimonials[1].profileimage.alt}/>
-                            </div>
-                            <div className="profile_name">
-                                {about.data.testimonials[1].profilename.text}
-                            </div>
-                        </div>
-                        <div className={this.state.activeTestimonial===2? "active_profile" : "profile"} onClick={() => this.setState({activeTestimonial: 2})}>
-                            <div className="profile_image">
-                                <Img fluid={about.data.testimonials[2].profileimage.fluid} alt={about.data.testimonials[2].profileimage.alt}/>
-                            </div>
-                            <div className="profile_name">
-                                {about.data.testimonials[2].profilename.text}
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
-            {/* </div> */}
+            </div>
+
+
+            <h1 className="hero_text">{about.data.title2.text}</h1>
+            <div className="testimonials">
+            <div className="">
+                    <Slider asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)} slidesToShow={1} swipeToSlide={true}>
+                        {about.data.testimonials.map((testimonial, i) => (
+                            <TestimonialSlider  html={testimonial.testimonialtext.html} i={i}/>
+                        ))}
+                    </Slider>
+            </div>
+
+            {/* slidesToShow={3} focusOnSelect={true} centerMode={true} responsive={[{breakpoint:1024}, {slidesToScroll:1}]} */}
+
+            <div className="">
+                <Slider asNavFor={this.state.nav1} ref={slider => (this.slider2 = slider)} {...settings}>
+                    {about.data.testimonials.map((testimonial, i) => (
+                            <Slide profileimage={testimonial.profileimage.fluid} alt={testimonial.profileimage.alt} profilename={testimonial.profilename.text} html={testimonial.testimonialtext.html} i={i}/>
+                    ))}
+                </Slider>
+            </div>
+            </div>    
+
 
 
             </Layout>
