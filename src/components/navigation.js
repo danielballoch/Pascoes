@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import Img from "gatsby-image"
 
 
+
 const Navigation = ({ path }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activePage, setActivePage] = useState(path);

@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 import Nav from "./navigation"
 import Footer from "./footer"
@@ -28,6 +29,7 @@ const Layout = ({ children, path }) => {
   return (
     <>
       <Nav siteTitle={data.site.siteMetadata.title} path={path}/>
+      <PageTransition>
       <div
        style={{
           margin: `0 auto`,
@@ -39,6 +41,7 @@ const Layout = ({ children, path }) => {
         </main>
       </div>
       <Footer/>
+      </PageTransition>
     </>
   )
 }

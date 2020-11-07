@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from 'gatsby-background-image'
 import {Parallax, Background} from 'react-parallax'
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 
 import Layout from "../components/layout"

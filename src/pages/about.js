@@ -126,7 +126,7 @@ class About extends Component {
 
             {/* slidesToShow={3} focusOnSelect={true} centerMode={true} responsive={[{breakpoint:1024}, {slidesToScroll:1}]} */}
 
-            <div className="">
+            <div className="reviewers">
                 <Slider asNavFor={this.state.nav1} ref={slider => (this.slider2 = slider)} {...settings}>
                     {about.data.testimonials.map((testimonial, i) => (
                             <Slide profileimage={testimonial.profileimage.fluid} alt={testimonial.profileimage.alt} profilename={testimonial.profilename.text} html={testimonial.testimonialtext.html} i={i}/>
