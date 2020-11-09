@@ -19,7 +19,7 @@ const Navigation = ({ path }) => {
                 data {
                    logo {
                        fluid {
-                            ...GatsbyPrismicImageFluid
+                            ...GatsbyPrismicImageFluid_noBase64
                             }
                        }
                    }
